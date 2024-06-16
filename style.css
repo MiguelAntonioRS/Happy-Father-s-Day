@@ -1,0 +1,402 @@
+body {
+    animation: bgAnim 10s linear infinite;
+}
+
+.wish {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, -30%);
+    font-family: monospace;
+    font-size: 60px;
+}
+
+.wish span {
+    display: block;
+    animation: wishAnim 3s infinite;
+}
+
+.container, .body {
+    position: relative;
+}
+
+.container {
+    width: 0px;
+    margin: 30vh auto;
+}
+
+.child .pants:before, .child .body:before, 
+.child .body:after, .dad .pants:after, .dad .pants:before, .dad .body .eye:before, 
+.dad .body .eye:after, .dad .body:before, .dad .body:after, .ear {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.arm {
+    position: absolute;
+    border-radius: 50px;
+}
+
+.eye {
+    position: absolute;
+    border-radius: 50%;
+    display: block;
+}
+
+.ear {
+    border-radius: 50%;
+}
+
+.pants {
+    position: absolute;
+    bottom: 0;
+    z-index: 50;
+}
+
+.body, .pants {
+    border-radius: 50px 50px 0 0;
+}
+
+.dad .body {
+    width: 100px;
+    height: 200px;
+    background-color: #c68642;
+    animation: tipAnim 1.25s cubic-bezier(1, 0.35, 0, 2) infinite;
+}
+
+.dad .body:after {
+    width: 30px;
+    height: 10px;
+    right: 10px;
+    top: 70px;
+    bottom: 40px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-bottom: 3px solid #2e1e0e;
+}
+
+.dad .body:before {
+    width: 110px;
+    height: 10px;
+    z-index: 100;
+    bottom: 0;
+    background-color: #070502;
+}
+
+.dad .body .ear {
+    width: 20px;
+    height: 20px;
+    background-color: #c68642;
+}
+
+.dad .body .ear.left {
+    top: 60px;
+    left: -10px;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.dad .body .ear.right {
+    top: 60px;
+    right: -10px;
+}
+
+.dad .body .eye {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    top: 50px;
+    border-top: 2px solid #7c5226;
+    animation: blinkAnim 1.25s infinite;
+}
+
+.dad .body .eye.left {
+    left: 30px;
+}
+
+.dad .body .eye.right {
+    left: 70px;
+}
+
+.dad .body .eye:after {
+    width: 10px;
+    height: 10px;
+    right: 2px;
+    background: #55381a;
+    animation: eyeAnim 1.25s infinite;
+    border-radius: 50%;
+}
+
+.dad .body .eye:before {
+    width: 20px;
+    height: 20px;
+    top: -15px;
+    left: -15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top: 3px solid #55381a;
+}
+
+.dad .pants {
+    width: 100px;
+    height: 100px;
+    background-color: #a46c31;
+}
+
+.dad .pants:before {
+    width: 100px;
+    height: 45px;
+    background-color: #ffffff;
+}
+
+.dad .pants:after {
+    width: 3px;
+    height: 30px;
+    bottom: 0;
+    left: 60px;
+    background-color: #070502;
+}
+
+.dad .arm {
+    width: 30px;
+    height: 60px;
+    background-color: #c68642;
+    animation: rightArmSwingAnim 1.25s ease-out infinite;
+    transform-origin: 0 100%;
+}
+
+.dad .arm.right {
+    left: 65px;
+    top: 35px;
+}
+
+.dad .arm.left {
+    left: 40px;
+    top: 45px;
+    z-index: 100;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.child {
+    position: absolute;
+    z-index: 51;
+    left: 100px;
+    animation: baby 1.25s ease-in-out infinite;
+}
+
+.child .body {
+    width: 50px;
+    height: 100px;
+    background-color: #f1c27d;
+}
+
+.child .body:after {
+    width: 0;
+    height: 0;
+    left: 15px;
+    border-style: solid;
+    animation: mouthAnim 1.25s ease-in-out infinite;
+}
+
+.child .body:before {
+    width: 56px;
+    height: 3px;
+    z-index: 100;
+    bottom: 0;
+    left: -3px;
+    background-color: #070502;
+}
+
+.child .body .eye {
+    width: 18px;
+    height: 10px;
+    background: transparent;
+    border: 2px solid transparent;
+    border-top: 2px solid #c87b15;
+    top: 25px;
+    z-index: 1;
+}
+
+.child .body .eye.right {
+    left: 5px;
+}
+
+.child .body .eye.left {
+    left: 25px;
+}
+
+.child .body .ear {
+    width: 10px;
+    height: 10px;
+    top: 30px;
+    background-color: #f1c27d;
+}
+
+.child .body .ear.left {
+    left: -5px;
+}
+
+.child .body .ear.right {
+    right: -5px;
+}
+
+.child .pants {
+    width: 50px;
+    height: 50px;
+    background-color: #ecac4f;
+}
+
+.child .pants:before {
+    width: 50px;
+    height: 25px;
+    background-color: #ffffff;
+}
+
+.child .arm {
+    width: 20px;
+    height: 40px;
+    top: 35px;
+    background-color: #f1c27d;
+}
+
+.child .arm.right {
+    left: -5px;
+    animation: rightArmSwingAnim 1.25s cubic-bezier(1, 0.35, 0, 2) infinite;
+}
+
+.child .arm.left {
+    left: 35px;
+    animation: leftArmSwingAnim 1.25s cubic-bezier(1, 0.35, 0, 2) infinite;
+}
+
+.quote {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px;
+    color: #ffffff;
+    letter-spacing: 5px;
+    animation: quoteAnim 2.5s infinite;
+}
+
+@keyframes rightArmSwingAnim {
+    0%, 10%, 90%, 100% {
+        transform: rotate(80deg);
+    }
+
+    40%, 60% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes leftArmSwingAnim {
+    0%, 10%, 90%, 100% {
+        transform: rotate(-80deg);
+    }
+
+    40%, 60% {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes baby {
+    0%, 90%, 100% {
+        top: 20%;
+        transform: rotate(20deg);
+    }
+
+    40%, 50% {
+        top: -60%;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes tipAnim {
+    0%, 90%, 100% {
+        transform: rotate(10deg);
+    }
+
+    40%, 50% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes blinkAnim {
+    0%, 2%, 60%, 62%, 100% {
+        transform: scaleX(1) scaleY(1);
+    }
+
+    1%, 61% {
+        transform: scaleX(1.3) scaleY(0.1);
+    } 
+}
+
+@keyframes eyeAnim {
+    0%, 100% {
+        top: 6px;
+    }
+
+    40%, 50% {
+        top: 2px;
+    }
+}
+
+@keyframes mouthAnim {
+    0%, 100% {
+        border-radius: 0;
+        border-width: 8px 5px 5px 5px;
+        border-color: #ffffff transparent transparent transparent;
+        top: 35%;
+    }
+
+    40%, 50% {
+        width: 10px;
+        height: 5px;
+        border-radius: 50%;
+        border-width: 2px;
+        border-color: transparent transparent #ffffff transparent;
+        top: 30px;
+    }
+}
+
+@keyframes quoteAnim {
+    0% {
+        text-shadow: 0 0 6px #000000;
+    }
+
+    100% {
+        text-shadow: 0 0 0px #000000;
+    }
+}
+
+@keyframes wishAnim {
+    0%, 100% {
+        text-shadow: 0 0 3px #000000;
+        color: #ffffff;
+    }
+    
+    25%, 75% {
+        text-shadow: 0 0 12px #000000;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #000000;
+    }
+}
+
+@keyframes bgAnim {
+    0%, 100% {
+        background-color: #83839b;
+    }
+    25% {
+        background-color: #73755a;
+    }
+    50% {
+        background-color: #684b4d;
+    }
+    75% {
+        background-color: #83839b;
+    }
+}
